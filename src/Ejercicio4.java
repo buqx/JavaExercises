@@ -1,24 +1,22 @@
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    Double nota;
+    public static void ejecutar() {
+        System.out.println("=== EJERCICIO 4: Condicional múltiple ===");
+        Scanner scanner = new Scanner(System.in);
 
-    public Ejercicio4() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese la nota 'Entre 1 y 5':");
-        nota = sc.nextDouble();
-        if (nota > 0 && nota <= 2){
+        System.out.print("Ingresa la calificación (0-5): ");
+        double calificacion = scanner.nextDouble();
+
+        if (calificacion >= 0 && calificacion <= 2) {
             System.out.println("Reprobado");
-        } else if (nota >= 3 && nota <= 4.5){
-            System.out.println("Aprobado");
-        } else if (nota >= 4.5 && nota <= 5){
+        } else if (calificacion == 3) {
+            System.out.println("Aprobado con lo mínimo");
+        } else if (calificacion >= 4 && calificacion <= 5) {
             System.out.println("Excelente");
         } else {
-            System.out.println("Nota invalida");
+            System.out.println("Calificación inválida");
         }
-    }
 
-    public static void main(String[] args) {
-        new Ejercicio4();
     }
 }

@@ -1,28 +1,27 @@
 import java.util.Scanner;
 
-public class Ejercuicio6 {
-    int numero;
-    int factorial = 1;
-    int i = 1;
-    public Ejercuicio6() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese un numero (entero) para calcular su factorial:");
-        numero = sc.nextInt();
-         while (i <= numero) {
-            factorial = factorial * i;
-            if( i == numero) {
-                System.out.println(i);
-            } else {
-                System.out.print(i + " x " );
+public class Ejercicio6 {
+    public static void ejecutar() {
+        System.out.println("=== EJERCICIO 6: Bucle while (Factorial) ===");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa un número positivo: ");
+        int numero = scanner.nextInt();
+
+        if (numero < 0) {
+            System.out.println("El número debe ser positivo");
+        } else {
+            long factorial = 1;
+            int i = 1;
+
+            while (i <= numero) {
+                factorial *= i;
+                i++;
             }
-            i++;
 
-         }
-        System.out.println("El factorial de " + numero + " es: " + factorial);
-        sc.close();
-    }
+            System.out.println(numero + "! = " + factorial);
+        }
 
-    public static void main(String[] args) {
-        new Ejercuicio6();
+
     }
 }

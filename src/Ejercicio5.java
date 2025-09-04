@@ -1,13 +1,11 @@
 public class Ejercicio5 {
-    int i;
-     public Ejercicio5() {
-            for(i = 1; i <= 50; i++){
-                if(i % 2 == 0){
-                    System.out.println(i + " es par");
-                }
-            }
-     }
-    public static void main(String[] args) {
-        new Ejercicio5();
+    public static void ejecutar() {
+        System.out.println("=== EJERCICIO 5: Bucle for (Números pares) ===");
+
+        System.out.println("Números pares del 1 al 50:");
+        for (int i = 2; i <= 50; i += 2) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
 }
